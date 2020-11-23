@@ -17,8 +17,12 @@
 		$apellidoMaterno=$_POST['apellidoMaterno'];
 		$nombres=$_POST['nombres'];
 		$FechaNacimiento=$_POST['FechaNacimiento'];
+		$EstadoNacimiento=$_POST['EstadoNacimiento'];
+		$MunicipioNacimiento=$_POST['MunicipioNacimiento'];
 		$sexo=$_POST['sexo'];
 		$edoCivil=$_POST['edoCivil'];
+		$EstadoResidencia=$_POST['EstadoResidencia'];
+		$MunicipioResidencia=$_POST['MunicipioResidencia'];
 		$domicilioCalle=$_POST['domicilioCalle'];
 		$domicilioNumero=$_POST['domicilioNumero'];
 		$domicilioColonia=$_POST['domicilioColonia'];
@@ -27,17 +31,24 @@
 		$gradoEstudios=$_POST['gradoEstudios'];
 		$email=$_POST['email'];
 		$celular=$_POST['celular'];
+
+
+       	 
 		
 
 
-		$addUser = $con->prepare("INSERT INTO registrados(apellido_paterno, apellido_materno, nombres, FechaNacimiento, sexo, edoCivil, domicilioCalle, domicilioNumero, domicilioColonia, domicilioCP, ocupacion, gradoEstudios, email, celular) VALUES(:apellidoPaterno, :apellidoMaterno, :nombres, :FechaNacimiento, :sexo, :edoCivil, :domicilioCalle, :domicilioNumero, :domicilioColonia, :domicilioCP, :ocupacion, :gradoEstudios, LOWER(:email), :celular)");
+		$addUser = $con->prepare("INSERT INTO registrados(apellido_paterno, apellido_materno, nombres, FechaNacimiento, EstadoNacimiento, MunicipioNacimiento, sexo, edoCivil, EstadoResidencia, MunicipioResidencia, domicilioCalle, domicilioNumero, domicilioColonia, domicilioCP, ocupacion, gradoEstudios, email, celular) VALUES(:apellidoPaterno, :apellidoMaterno, :nombres, :FechaNacimiento, :EstadoNacimiento, :MunicipioNacimiento, :sexo, :edoCivil, :EstadoResidencia, :MunicipioResidencia, :domicilioCalle, :domicilioNumero, :domicilioColonia, :domicilioCP, :ocupacion, :gradoEstudios, LOWER(:email), :celular)");
 
 			$addUser ->bindParam(':apellidoPaterno',$apellidoPaterno, PDO::PARAM_STR);
 			$addUser ->bindParam(':apellidoMaterno',$apellidoMaterno, PDO::PARAM_STR);
 			$addUser ->bindParam(':nombres',$nombres, PDO::PARAM_STR);
 			$addUser ->bindParam(':FechaNacimiento',$FechaNacimiento, PDO::PARAM_STR);
+			$addUser ->bindParam(':EstadoNacimiento',$EstadoNacimiento, PDO::PARAM_STR);
+			$addUser ->bindParam(':MunicipioNacimiento',$MunicipioNacimiento, PDO::PARAM_STR);
 			$addUser ->bindParam(':sexo',$sexo, PDO::PARAM_STR);
 			$addUser ->bindParam(':edoCivil',$edoCivil, PDO::PARAM_STR);
+			$addUser ->bindParam(':EstadoResidencia',$EstadoResidencia, PDO::PARAM_STR);
+			$addUser ->bindParam(':MunicipioResidencia',$MunicipioResidencia, PDO::PARAM_STR);
 			$addUser ->bindParam(':domicilioCalle',$domicilioCalle, PDO::PARAM_STR);
 			$addUser ->bindParam(':domicilioNumero',$domicilioNumero, PDO::PARAM_STR);
 			$addUser ->bindParam(':domicilioColonia',$domicilioColonia, PDO::PARAM_STR);

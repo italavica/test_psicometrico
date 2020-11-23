@@ -3,6 +3,11 @@
 
 	var _form = $(this);
 	var _error = $(".js-error", _form);
+	var EstadoNacimiento= $("#estado option:selected").text();
+	var MunicipioNacimiento= $("#municipio option:selected").text();
+	var EstadoResidencia= $("#estado_r option:selected").text();
+	var MunicipioResidencia= $("#municipio_r option:selected").text();
+
 
 	var dataObj = {
 
@@ -10,8 +15,12 @@
 		apellidoMaterno: $("input#am",_form).val(),
 		nombres:$("input#nombres",_form).val(),
 		FechaNacimiento: $("input[type='date']", _form).val(),
+		EstadoNacimiento: EstadoNacimiento,
+		MunicipioNacimiento: MunicipioNacimiento,
 		sexo:$("select#sexo",_form).val(),
 		edoCivil:$("select#edo-civil",_form).val(),
+		EstadoResidencia: EstadoResidencia,
+		MunicipioResidencia: MunicipioResidencia,
 		domicilioCalle:$("input#domicilio_calle",_form).val(),
 		domicilioNumero:$("input#domicilio_numero",_form).val(),
 		domicilioColonia:$("input#domicilio_colonia",_form).val(),
@@ -22,6 +31,8 @@
 		email: $("input[type='email']", _form).val()
 		
 	};
+
+
 
 	//console.log(dataObj);
 
@@ -41,6 +52,9 @@
 		data: dataObj,
 		dataType: 'json',
 		async: true,
+		success: function(output){
+			alert(output);
+		}
 	})
 	.done(function ajaxDone(data) {
 		// Whatever data is 
@@ -60,5 +74,7 @@
 	})
 
 	return false;
-})
+
+	})
+
 

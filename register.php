@@ -52,7 +52,32 @@ require_once 'inc/config.php';
               <div class="uk-margin" >
                 <label class="uk-form-label" for="form-stacked-text">Fecha de Nacimiento</label>
                 <div class="uk-form-row">
-                    <input type="date" class="birth-date">
+                    <!-- <input type="date" class="uk-birth-date"> -->
+                   <input type="date" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                </div>
+            </div>
+
+                 <div class="uk-margin" >
+                <label class="uk-form-label" for="form-stacked-text">Entidad de Nacimiento</label>
+                <div class="uk-form-row">
+                    <select name="estado" class="uk-select" id="estado">
+                        <option value=""> seleccionar estado</option>
+                        <?php  
+                        $con = mysqli_connect('localhost','itzelavila','iaac23','test_psicometrico');
+                        $query = mysqli_query($con, "SELECT * FROM estados");
+                        while ($row=mysqli_fetch_array($query)){
+                         ?> 
+                         <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']?> </option>
+                         <?php   
+                        }
+                        ?>
+                    </select>
+                </div>
+
+                <div class="uk-form-row">
+                    <select name="municipio" class="uk-select" id="municipio">
+                        <option value="">seleccionar municipio</option>
+                    </select>
                 </div>
             </div>
 
@@ -86,6 +111,30 @@ require_once 'inc/config.php';
 
 
               <div class="uk-margin" style="position: relative;  top:25px; ">
+
+                      <div class="uk-margin" >
+                <label class="uk-form-label" for="form-stacked-text">Entidad de Residencia</label>
+                <div class="uk-form-row">
+                    <select name="estado_r" class="uk-select" id="estado_r">
+                        <option value=""> seleccionar estado</option>
+                        <?php  
+                        $con = mysqli_connect('localhost','itzelavila','iaac23','test_psicometrico');
+                        $query = mysqli_query($con, "SELECT * FROM estados");
+                        while ($row=mysqli_fetch_array($query)){
+                         ?> 
+                         <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']?> </option>
+                         <?php   
+                        }
+                        ?>
+                    </select>
+                </div>
+
+                <div class="uk-form-row">
+                    <select name="municipio_r" class="uk-select" id="municipio_r">
+                        <option value="lkn">seleccionar municipio</option>
+                    </select>
+                </div>
+            </div>
            
 
                     <label class="uk-form-label" for="form-stacked-text">Calle</label>
