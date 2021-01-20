@@ -28,7 +28,7 @@ require_once 'inc/config.php';
     ?>
     <p>
         
-    <a href="/examen_psicometrico/register.php">Registro</a>
+    <a href="/test_psicometrico/register.php">Registro</a>
 
     </p>
 
