@@ -27,6 +27,11 @@ require_once 'inc/config.php';
 
             <h1>MEDICIÓN RÁPIDA DE HABILIDAD INTELECTUAL</h1>
             <h3>BA R S I T</h3>
+            <div align="right" uk-countdown="date: 2021-01-26T23:15:09+00:00">
+    <span class="uk-countdown-number uk-countdown-minutes"></span>
+    <span class="uk-countdown-separator">:</span>
+    <span class="uk-countdown-number uk-countdown-seconds"></span>
+</div>
             <h6>C U E S T I O N A R I O</h6>
 
 
@@ -558,9 +563,12 @@ require_once 'inc/config.php';
                 <button class="uk-button uk-button-default" type="submit">Continuar</button>
             </div>
 
+
+
         </form>
     </div>
- 
+
+
 
 </div>
  <!--Uikit JS -->
