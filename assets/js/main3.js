@@ -48,7 +48,7 @@
 
 	$.ajax({
 		type: 'POST',
-		url: '/examen_psicometrico/ajax/reg.php',
+		url: '/Psicometrico/ajax/reg.php',
 		data: dataObj,
 		dataType: 'json',
 		async: true,

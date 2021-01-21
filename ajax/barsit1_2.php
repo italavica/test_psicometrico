@@ -137,7 +137,7 @@
 
 			$_SESSION['candidato_id'] = (int) $candidato_id;
 
-			$return['redirect']='/examen_psicometrico/prueba1.php?message=welcome';
+			$return['redirect']='/Psicometrico/Gordon.php?message=welcome';
 			$return['is_logged_in']= true;
 		
 

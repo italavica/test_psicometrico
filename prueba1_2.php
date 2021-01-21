@@ -16,6 +16,7 @@ require_once 'inc/config.php';
 
     <!--Uikit JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="fixedbanner.css">
     <title>Barsit</title>
 </head>
 
@@ -27,11 +28,41 @@ require_once 'inc/config.php';
 
             <h1>MEDICIÓN RÁPIDA DE HABILIDAD INTELECTUAL</h1>
             <h3>BA R S I T</h3>
-            <div align="right" uk-countdown="date: 2021-01-26T23:15:09+00:00">
-    <span class="uk-countdown-number uk-countdown-minutes"></span>
-    <span class="uk-countdown-separator">:</span>
-    <span class="uk-countdown-number uk-countdown-seconds"></span>
-</div>
+<h1>  <div align="left"  id="demo"> 
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date().getTime()+6000 ;
+//602000 10m
+//5,400,000
+//11538 10s
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML =  minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</div> </h1> 
             <h6>C U E S T I O N A R I O</h6>
 
 
@@ -95,10 +126,10 @@ require_once 'inc/config.php';
 
                      <div class="uk-form-controls">
                         <label>10  15  20  25  </label>
-                        <input class="uk-input" id="p5" style="display: inline-block; width: 60px; border: 0px;"   type="text" required="required" placeholder="__" >  
+                        <input class="uk-input" id="p5" value =" " style="display: inline-block; width: 60px; border: 0px;"   type="text" placeholder="__" >  
 
                         <label>35  40  45  </label>
-                        <input class="uk-input" id="p6" style="display: inline-block; width: 60px; border: 0px;"  type="text" required="required" placeholder="__" >
+                        <input class="uk-input" id="p6" value =" " style="display: inline-block; width: 60px; border: 0px;"  type="text"  placeholder="__" >
                         <label>55</label>
                      </div> 
             </div> 
@@ -160,8 +191,8 @@ require_once 'inc/config.php';
                      <label class="uk-form-label" for="form-stacked-text">10. Escriba los dos números que faltan a esta serie</label>
 
                      <div class="uk-form-controls">
-                        <label>6  9  12 </label><input class="uk-input" id="p11" style="display: inline-block; width: 35px; border: 0px; size: 8;"   type="text" required="required" placeholder="__" ><label>18  21  24</label>
-                        <input class="uk-input" id="p12" style="display: inline-block; width: 35px; border: 0px; size: 28;"  type="text" required="required" placeholder="__" ><label>30</label>
+                        <label>6  9  12 </label><input class="uk-input" id="p11" value ="0"  style="display: inline-block; width: 35px; border: 0px; size: 8;"   type="text"  placeholder="__" ><label>18  21  24</label>
+                        <input class="uk-input" id="p12" value ="0"  style="display: inline-block; width: 35px; border: 0px; size: 28;"  type="text"  placeholder="__" ><label>30</label>
                      </div> 
             </div> 
 
@@ -222,10 +253,10 @@ require_once 'inc/config.php';
 
                      <div class="uk-form-controls">
                         <label>7 9 11 13 </label>
-                        <input class="uk-input" id="p17" style="display: inline-block; width: 60px; border: 0px;"   type="text" required="required" placeholder="__" >  
+                        <input class="uk-input" id="p17" value =" "  style="display: inline-block; width: 60px; border: 0px;"   type="text"  placeholder="__" >  
 
                         <label>17</label>
-                        <input class="uk-input" id="p18" style="display: inline-block; width: 60px; border: 0px;"  type="text" required="required" placeholder="__" >
+                        <input class="uk-input" id="p18" value =" "  style="display: inline-block; width: 60px; border: 0px;"  type="text"  placeholder="__" >
                         <label>21 23</label>
                      </div> 
             </div>
@@ -287,10 +318,10 @@ require_once 'inc/config.php';
 
                      <div class="uk-form-controls">
                         <label>7  14  21  28 </label>
-                        <input class="uk-input" id="p23" style="display: inline-block; width: 60px; border: 0px;"   type="text" required="required" placeholder="__" >  
+                        <input class="uk-input" id="p23" value =" "  style="display: inline-block; width: 60px; border: 0px;"   type="text"  placeholder="__" >  
 
                         <label>42  49</label>
-                        <input class="uk-input" id="p24" style="display: inline-block; width: 60px; border: 0px;"  type="text" required="required" placeholder="__" >
+                        <input class="uk-input" id="p24" value =" "  style="display: inline-block; width: 60px; border: 0px;"  type="text"  placeholder="__" >
                         <label>63  70</label>
                      </div> 
             </div>
@@ -352,10 +383,10 @@ require_once 'inc/config.php';
 
                      <div class="uk-form-controls">
                         <label>40  36  32  28</label>
-                        <input class="uk-input" id="p29" style="display: inline-block; width: 60px; border: 0px;"   type="text" required="required" placeholder="__" >  
+                        <input class="uk-input" id="p29" value =" " style="display: inline-block; width: 60px; border: 0px;"   type="text" placeholder="__" >  
 
                         <label>20  16  12</label>
-                        <input class="uk-input" id="p30" style="display: inline-block; width: 60px; border: 0px;"  type="text" required="required" placeholder="__" >
+                        <input class="uk-input" id="p30" value =" "  style="display: inline-block; width: 60px; border: 0px;"  type="text"  placeholder="__" >
                         <label>4</label>
                      </div> 
             </div>
@@ -417,10 +448,10 @@ require_once 'inc/config.php';
 
                      <div class="uk-form-controls">
                         <label>64  58  52  46</label>
-                        <input class="uk-input" id="p35" style="display: inline-block; width: 60px; border: 0px;"   type="text" required="required" placeholder="__" >  
+                        <input class="uk-input" id="p35"  value =" " style="display: inline-block; width: 60px; border: 0px;"   type="text"  placeholder="__" >  
 
                         <label>34  28</label>
-                        <input class="uk-input" id="p36" style="display: inline-block; width: 60px; border: 0px;"  type="text" required="required" placeholder="__" >
+                        <input class="uk-input" id="p36"  value =" " style="display: inline-block; width: 60px; border: 0px;"  type="text"  placeholder="__" >
                         <label>16  10  4</label>
                      </div> 
             </div>              
@@ -482,10 +513,10 @@ require_once 'inc/config.php';
 
                      <div class="uk-form-controls">
                         <label>5  10  20</label>
-                        <input class="uk-input" id="p41" style="display: inline-block; width: 60px; border: 0px;"   type="text" required="required" placeholder="__" >  
+                        <input class="uk-input" id="p41"  value =" " style="display: inline-block; width: 60px; border: 0px;"   type="text"  placeholder="__" >  
 
                         <label>80  160</label>
-                        <input class="uk-input" id="p42" style="display: inline-block; width: 60px; border: 0px;"  type="text" required="required" placeholder="__" >
+                        <input class="uk-input" id="p42" value =" "  style="display: inline-block; width: 60px; border: 0px;"  type="text"  placeholder="__" >
                         <label>640  1280</label>
                      </div> 
             </div>
@@ -548,10 +579,10 @@ require_once 'inc/config.php';
 
                      <div class="uk-form-controls">
                         <label>2  4</label>
-                        <input class="uk-input" id="p47" style="display: inline-block; width: 60px; border: 0px;"   type="text" required="required" placeholder="__" >  
+                        <input class="uk-input" id="p47"  value =" " style="display: inline-block; width: 60px; border: 0px;"  type="text"  placeholder="__" >  
 
                         <label>16  32</label>
-                        <input class="uk-input" id="p48" style="display: inline-block; width: 60px; border: 0px;"  type="text" required="required" placeholder="__" >
+                        <input class="uk-input" id="p48" value =" " style="display: inline-block; width: 60px; border: 0px;"  type="text"  placeholder="__" >
                         <label>128  256</label>
                      </div> 
             </div>
@@ -579,8 +610,9 @@ require_once 'inc/config.php';
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- <script src="//geodata.solutions/includes/countrystatecity.js"></script> -->
 
+<script src="/Psicometrico/assets/js/barsit.js"></script>
+<script src="/Psicometrico/assets/js/jquery.js"></script>
 
-<script src="/examen_psicometrico/assets/js/barsit.js"></script>
-<script src="/examen_psicometrico/assets/js/jquery.js"></script>
+<script src="/Psicometrico/fixedbanner.js"></script>
 </body>
 </html>

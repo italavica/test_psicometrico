@@ -1,4 +1,4 @@
- $(document).on("submit", "form.js-barsit1", function(event) {
+ $(document).on("submit", "form.js-barsit2", function(event) {
 	event.preventDefault();
 
 	var _form = $(this);

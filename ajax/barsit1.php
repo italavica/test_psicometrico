@@ -19,7 +19,7 @@
        	 
 		
 
-			$return['redirect']='/examen_psicometrico/prueba1_2.php?message=welcome';
+			$return['redirect']='/Psicometrico/prueba1_2.php?message=welcome';
 			$return['is_logged_in']= true;
 		
 

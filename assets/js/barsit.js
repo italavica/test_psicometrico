@@ -73,7 +73,7 @@ $(document).on("submit", "form.js-barsit1", function(event) {
 
 	$.ajax({
 		type: 'POST',
-		url: '/examen_psicometrico/ajax/barsit1_2.php',
+		url: '/Psicometrico/ajax/barsit1_2.php',
 		data: datObj,
 		dataType: 'json',
 		async: true,
@@ -101,5 +101,9 @@ $(document).on("submit", "form.js-barsit1", function(event) {
 	return false;
 
 	})
+
+
+
+
 
 

@@ -49,7 +49,7 @@ Ejemplo 2: Debió escribir los números <b>12</b> y <b>16</b>.</p>
                 test
             </div>
             <div class="uk-margin" style="position: relative;  top:50px; ">
-                <button class="uk-button uk-button-default" type="submit">Continuar</button>
+                <button class="uk-button uk-button-default" type="submit" onclick="timeOUT()">Continuar</button>
             </div>
 
         </form>
@@ -65,7 +65,7 @@ Ejemplo 2: Debió escribir los números <b>12</b> y <b>16</b>.</p>
 <!-- <script src="//geodata.solutions/includes/countrystatecity.js"></script> -->
 
 
-<script src="/examen_psicometrico/assets/js/Prueba1_intro.js"></script>
-<script src="/examen_psicometrico/assets/js/jquery.js"></script>
+<script src="/Psicometrico/assets/js/Prueba1_intro.js"></script>
+<script src="/Psicometrico/assets/js/jquery.js"></script>
 </body>
 </html>

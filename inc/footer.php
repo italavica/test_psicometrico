@@ -7,6 +7,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- <script src="//geodata.solutions/includes/countrystatecity.js"></script> -->
 
-<script src="/examen_psicometrico/assets/js/main3.js"></script>
-<script src="/examen_psicometrico/assets/js/Prueba1_intro.js"></script>
-<script src="/examen_psicometrico/assets/js/jquery.js"></script>
+<script src="/Psicometrico/assets/js/main3.js"></script>
+<script src="/Psicometrico/assets/js/Prueba1_intro.js"></script>
+<script src="/Psicometrico/assets/js/jquery.js"></script>
